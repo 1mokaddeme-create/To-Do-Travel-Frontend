@@ -1,0 +1,307 @@
+#tour-header{
+    text-align: center;
+    margin-top: 70px;
+    color: #13253F;
+    font-family: 'Volkhov', serif;
+    font-size: 32px;
+}
+
+#details-page{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    align-items: center;
+    padding: 12px 24px;
+    margin-left: 100px;
+    gap: 50px;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #f44336;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.detail-img{
+   max-width: 500px;
+   width: 100%;
+   height: 400px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+
+#left-side-infos{
+    background-color: rgb(19, 37, 63, 0.95);
+    border-radius: 8px;
+    font-family: 'Mulish', sans-serif;
+    color: #ffffff;
+    padding: 12px 24px;
+    margin-bottom: 20px;
+}
+
+#left-side-infos h5{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#right-side{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#user-infos{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 24px;
+    margin-bottom: 5%;
+    border: #13253F 2px solid;
+    border-radius: 8px;
+    background-color: rgb(19, 37, 63, 0.05);
+    box-shadow: 8px 8px 16px rgb(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+#user-infos:hover{
+    transform: scale(1.05);
+    box-shadow: 12px 12px 20px rgb(0, 0, 0, 0.15);
+}
+
+#details{
+    display: flex;
+    align-items: baseline;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+    color: #13253F;
+    gap: 10px;
+    width: 100%;
+}
+
+#details-members{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#details input{
+    color: #13253F;
+    width: 250px;
+    background-color: rgb(19, 37, 63, 0.2);
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#tour-infos p{
+   color: #13253F;
+   font-family: 'Mulish', sans-serif;
+}
+
+#confirme-btn{
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    color: #13253F;
+    background-color:  #FFDA32;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 6px 14px rgb(0, 0, 0, 0.15);
+    padding: 12px 28px;
+    margin: 20px 0px;
+    transition: all 0.4s ease;
+}
+
+#confirme-btn:hover{
+    background-color: #e6c200;
+    transform: scale(1.1);
+}
+
+/* @media(max-width:480px){
+    #tour-header{
+      margin-top: 70px;  
+      font-size: 24px;
+    }
+
+    #details-page{
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 6px 12px;
+      margin-left: 0px;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .detail-img{
+      width: 100%;
+      height: 300px;
+     }
+
+    #left-side{
+        width: 70%;
+    }
+
+   #left-side-infos{
+      font-size: 14px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+   #left-side-infos h5{
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+   #right-side{
+      justify-content: center;
+      margin-top: 30px;
+      width: 100%;
+    }
+
+   #user-infos{
+       gap: 10px;
+       width: 100%;
+       padding: 20px;
+       margin-bottom: 10%;
+       width: 70%;
+    }
+
+   #details{
+       display: flex;
+       flex-direction: row;
+       align-items: baseline;
+       gap: 15px;
+       font-size: 14px;
+    }
+    #details-members{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    #details input{
+      width: 50%;
+      padding: 8px;
+    }
+
+   #tour-infos p{
+      font-size: 12px;
+    }
+
+    #confirme-btn{
+       padding: 6px 20px;
+       margin: 10px 0px;
+       font-size: 16px;
+    }
+
+    .swiper{
+        width: 100%;
+    }
+
+} */
+
+@media(max-width:480px){
+    #tour-header{
+      margin-top: 70px;  
+      font-size: 24px;
+      padding: 0 15px;
+    }
+
+    #details-page{
+      display: flex; /* Change from grid to flex for better mobile control */
+      flex-direction: column;
+      padding: 10px 15px;
+      margin-left: 0;
+      gap: 20px;
+      box-sizing: border-box;
+    }
+
+    #left-side{
+        margin-right: 60px;
+        width: 80%;
+    }
+
+    .detail-img{
+      width: 100%;
+      height: 300px;
+      max-width: 100%;
+    }
+
+    #left-side-infos{
+      font-size: 14px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+   #left-side-infos h5{
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+   #left-side-infos p{
+      line-height: 1.6;
+    }
+
+   #right-side{
+      justify-content: center;
+      margin-top: 20px;
+      width: 80%;
+      padding: 0px 10px;
+    }
+
+   #user-infos{
+       gap: 12px;
+       width: 100%;
+       padding: 20px 30px;
+       margin-bottom: 30px;
+    }
+
+   #details{
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 5px;
+       width: 100%;
+       font-size: 14px;
+    }
+
+    #details-members{
+        width: 90%;
+        gap: 8px;
+    }
+    
+    #details input{
+      width: 100%;
+      padding: 10px;
+      font-size: 16px; 
+    }
+
+   #tour-infos{
+      width: 100%;
+   }
+
+   #tour-infos p{
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    #confirme-btn{
+       padding: 12px 24px;
+       margin: 15px 0px;
+       font-size: 16px;
+       width: 100%;
+    }
+
+    .swiper{
+        width: 100%;
+    }
+}
+

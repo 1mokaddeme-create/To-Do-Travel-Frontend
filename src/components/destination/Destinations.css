@@ -1,0 +1,133 @@
+.destination-image{
+    width: 120px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+#destinations-page {
+  margin: 0 auto;
+  max-width: 1200px;   
+  padding: 40px 20px;
+}
+
+#destination{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 250px;
+    color: #F9FAFD;
+}
+
+#destination-header{
+    margin-top: 50px;
+    text-align: center;
+}
+
+#destination-header header{
+    font-size: 32px;
+    font-family: 'Volkhov', serif;
+    color: #13253F;
+    text-decoration:underline ;
+    text-shadow: 2px 2px 4px rgba(145, 145, 145, 0.5);
+}
+
+#destination-header p{
+    font-family: 'Mulish', sans-serif;
+    color: #13253F;
+    font-style: italic;
+}
+
+.destination-card{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr ;
+    align-items: center;
+    gap: 20px;
+    border: #b9dcd4 2px solid ;
+    border-radius: 8px;
+    box-shadow: 4px 8px 12px rgb(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.destination-card:hover{
+   transform: translateY(5%) scale(1.1);
+   box-shadow: 6px 12px 14px rgb(0, 0, 0, 0.15);
+} 
+
+.infos h3{
+    font-size: 24px;
+    font-family: 'Volkhov', serif;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color:#13253F;
+}
+
+.infos p{
+    font-size: 12px;
+    font-family: 'Mulish', sans-serif;
+    font-style: italic;
+    color: #13253F;
+    margin: 0;
+}
+
+.des-bookingBtn{
+    background-color: rgb(185, 220, 212);
+    transition: all 0.4s;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    margin-right: 15%;
+}
+
+.des-bookingBtn:hover{
+   transform: scale(1.1);
+   background-color: rgb(168, 199, 193);
+}
+
+
+@media(max-width:480px){
+
+    .destination-image{
+       width: 80px;
+       height: 80px;
+    }
+
+    #destinations-page {  
+       padding: 20px;
+    }
+
+    #destination{
+       padding: 20px;
+    }
+
+    #destination-header header{
+       font-size: 20px;
+    }
+
+    #destination-header p{
+       font-size: 12px;
+    }
+
+   .destination-card{
+      gap: 10px;
+      box-shadow: 2px 4px 6px rgb(0, 0, 0, 0.1);
+    }
+
+    .destination-card:hover{
+       box-shadow: 3px 6px 7px rgb(0, 0, 0, 0.15);
+    } 
+
+    .infos h3{
+      font-size: 16px;
+    }
+
+    .infos p{
+       font-size: 9px;
+    }
+
+    .des-bookingBtn{
+        font-size: 9px;     
+        padding: 6px 8px;
+    }
+}

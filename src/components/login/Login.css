@@ -1,0 +1,228 @@
+.login-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+
+#left{
+    background: linear-gradient(rgba(19, 37, 63, 0.7), rgba(19, 37, 63, 0.8)),
+              url('/images/tipaza.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#content{
+    text-align: center;
+    padding: 40px;
+}
+
+#content .content-header{
+  font-family: 'Volkhov', serif;
+  font-size: 64px;
+  color: #FFDA32;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-align: center;
+  width: 100%;
+}
+
+#welcoming{
+  font-family: 'Mulish', sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  max-width: 600px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.feature {
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  color: #FFDA32;
+}
+
+#right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #f8f9fa;
+}
+
+#login-form{
+    margin-top: 5%;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+    background:white;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#login-form h2{
+  font-family: 'Volkhov', serif;
+  color: #13253F;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+#login{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#login label{
+    font-family: 'Mulish', sans-serif;
+    color: #13253F;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+#login input{
+    width: 90%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#login input:focus {
+  outline: none;
+  border-color: #FFDA32;
+}
+
+#forgot-container{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.forgot-password {
+  font-family: 'Mulish', sans-serif;
+  color: #13253F;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password:hover {
+  color: #FFDA32;
+}
+
+#login-btn {
+  width: 100%;
+  background: #FFDA32;
+  color: #13253F;
+  border: none;
+  padding: 15px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#login-btn:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+}
+
+.register-link {
+  text-align: center;
+  font-family: 'Mulish', sans-serif;
+  color: #13253F;
+}
+
+#register {
+  color: #13253F;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#register:hover {
+  color: #FFDA32;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #f44336;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+
+@media (max-width: 480px) {
+  .login-page{ 
+    grid-template-columns: 1fr;
+    height: 80vh;
+  }
+
+  #left{
+   display: none;
+  }
+
+  #login-form{
+    margin-top: 5%;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+    background:white;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #login-form h2{
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  #login{
+    margin-bottom: 10px;
+  }
+
+  #login label{
+    font-size: 14px;
+    margin-bottom: 6px;
+   }
+
+  #login input{
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .forgot-password {
+    font-size: 10px;
+  }
+
+  #login-btn {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .register-link {
+    font-size: 14px;
+  }
+
+  #register {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,101 @@
+#footer-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    background-color: #13253F;
+    padding: 40px 80px;
+    align-items: center;
+}
+
+#logo-name{
+    margin-top: 20px;
+    padding: 12px 60px;
+}
+
+#logo-name h3{
+     font-size: 20px;
+     font-family: 'Volkhov', serif;
+     font-weight: 600;
+     color: white;
+}
+
+#logo-name p{
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+    color: white;
+}
+  
+#footer-ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    font-size: 11px;
+    font-family: 'Mulish', sans-serif;
+    margin-left: 100px;
+}
+
+#footer-ul li{
+    color: #FFDA32;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: white;
+    transition: all 0.4 ease;
+}
+
+.footer-link:hover{
+    color: #FFDA32;
+    text-decoration: underline;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 12px;
+}
+
+@media(max-width:480px){
+    #footer-section{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+      padding: 20px 10px;
+    }
+
+    #logo-name{
+      grid-column-start: 1;  
+      grid-column-end: 3 ;
+      display: flex;
+      align-items: baseline;
+      gap: 15px;
+      margin-top: 0px;
+      padding: 6px 20px;
+    }
+
+#logo-name h3{
+     font-size: 16px;
+}
+
+#logo-name p{
+    font-size: 10px;
+}
+  
+#footer-ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 20px;
+    font-size: 10px;
+    margin-left: 0px;
+}
+
+#contact{
+    font-size: 12px;
+}
+
+
+}

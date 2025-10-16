@@ -1,0 +1,158 @@
+#register-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+#left {
+    background: linear-gradient(rgba(19, 37, 63, 0.7), rgba(19, 37, 63, 0.8)),
+                url('/images/tipaza.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#left h1 {
+    font-family: 'Volkhov', serif;
+    font-size: 48px;
+    color: #FFDA32;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 40px;
+}
+
+#register-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #f8f9fa;
+}
+
+#register-form {
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 5%;
+}
+
+#register-form h2 {
+    font-family: 'Volkhov', serif;
+    color: #13253F;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.register-info {
+    margin-bottom: 20px;
+}
+
+.register-info input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.register-info input:focus {
+    outline: none;
+    border-color: #FFDA32;
+}
+
+#register-btn {
+    width: 100%;
+    background: #FFDA32;
+    color: #13253F;
+    border: none;
+    padding: 15px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#register-btn:hover {
+    background: #e6c200;
+    transform: translateY(-2px);
+}
+
+.login-link {
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+    color: #13253F;
+}
+
+#login-link {
+    color: #13253F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#login-link:hover {
+    color: #FFDA32;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #f44336;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    #register-page {
+       grid-template-columns: 1fr;
+    }
+
+    #left {
+       display: none;
+    }
+ 
+    #register-form {
+        margin-top: 20%;
+       padding: 40px;
+    }
+
+    #register-form h2 {
+       margin-bottom: 20px;
+       font-size: 22px;
+    }
+
+   .register-info {
+       margin-bottom: 10px;
+    }
+
+   .register-info input {
+       padding: 10px 12px;
+       font-size: 12px;
+    }
+
+    #register-btn {
+       padding: 10px;
+       font-size: 14px;
+    }
+
+    .login-link {
+        font-size: 14px;
+    }
+
+    #login-link {
+       font-size: 14px;
+    }
+}
