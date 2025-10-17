@@ -10,7 +10,7 @@ const Login = ({setIsloggedin}) => {
     const passwordRef = useRef()
     const navigate = useNavigate()
     const [generalError, setGeneralError] = useState('')
-    const API_URL = process.env.REACT_APP_API_URL;
+    const API_URL = process.env.REACT_APP_API_URL || "https://to-do-travel-backend-2.onrender.com";
     
     console.log("before handling errors")
     const handleErrors = () => {

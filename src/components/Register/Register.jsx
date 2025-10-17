@@ -12,8 +12,11 @@ const Register = ({ setIsloggedin}) => {
     const wilayaRef = useRef()
     const navigate = useNavigate()
     const [errorMessage, setErrorMessage] = useState('')
-    const API_URL = process.env.REACT_APP_API_URL;
+    const API_URL = process.env.REACT_APP_API_URL || "https://to-do-travel-backend-2.onrender.com";
+    console.log("Login - API_URL:", API_URL);
+    console.log("Login - Full URL:", `${API_URL}/login`);
 
+    
     const handleErrors = () => {
         setErrorMessage('')
     }
