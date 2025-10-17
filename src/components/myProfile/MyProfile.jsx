@@ -8,10 +8,11 @@ const MyProfile = ({userInfos}) => {
     let token = localStorage.getItem("token")
 
     const [myBookings, setMybookings] = useState({tours: [], destinations: []})
+     const API_URL = process.env.REACT_APP_API_URL;
 
     const fetchBookings = async()=>{
         try {
-            const res = await axios.get("http://localhost:4000/myBookings",{
+            const res = await axios.get(`${API_URL}/myBookings`,{
                 headers: { Authorization: `Bearer ${token}`}
             })
 

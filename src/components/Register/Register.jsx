@@ -12,6 +12,7 @@ const Register = ({ setIsloggedin}) => {
     const wilayaRef = useRef()
     const navigate = useNavigate()
     const [errorMessage, setErrorMessage] = useState('')
+    const API_URL = process.env.REACT_APP_API_URL;
 
     const handleErrors = () => {
         setErrorMessage('')
@@ -27,7 +28,7 @@ const Register = ({ setIsloggedin}) => {
         const wilaya = wilayaRef.current.value
 
         try {
-            const res = await axios.post("http://localhost:4000/register", {
+            const res = await axios.post(`${API_URL}/register`, {
                 name,
                 email,
                 password,

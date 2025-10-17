@@ -10,6 +10,7 @@ const Login = ({setIsloggedin}) => {
     const passwordRef = useRef()
     const navigate = useNavigate()
     const [generalError, setGeneralError] = useState('')
+    const API_URL = process.env.REACT_APP_API_URL;
     
     console.log("before handling errors")
     const handleErrors = () => {
@@ -26,7 +27,7 @@ const Login = ({setIsloggedin}) => {
 
         try {
             
-            const res = await axios.post("http://localhost:4000/login",{
+            const res = await axios.post(`${API_URL}/login`,{
                 email,
                 password
             })

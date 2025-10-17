@@ -21,6 +21,7 @@ const ToursDetails = ({tours, userInfos}) => {
     const { tourname } = useParams();
     const decodedName = tourname ? decodeURIComponent(tourname) : '';
     const tour = tours.find((t) => t.name === decodedName) 
+    const API_URL = process.env.REACT_APP_API_URL;
 
     if(!userInfos){
       return <Navigate to="/login" replace />
@@ -74,7 +75,7 @@ const ToursDetails = ({tours, userInfos}) => {
 
 
         try {
-          const res = await axios.post("http://localhost:4000/user/tour",{
+          const res = await axios.post(`${API_URL}/user/tour`,{
           members: membersNumber,
           tour: tourId,
           },{

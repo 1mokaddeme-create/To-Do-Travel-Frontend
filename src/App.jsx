@@ -23,9 +23,12 @@ const App = () => {
 
       const [userinfos, setUserinfos] = useState(null)
 
+        // Add this line at the top of your component
+        const API_URL = process.env.REACT_APP_API_URL;
+
       const fetchDestinations = async ()=>{
         try {
-          const res = await axios.get("http://localhost:4000/destinations")
+          const res = await axios.get(`${API_URL}/destinations`)
 
           if(res.status === 200){
             setDestinations(res.data.data)
@@ -37,7 +40,7 @@ const App = () => {
 
       const fetchTours = async ()=>{
         try {
-          const res = await axios.get("http://localhost:4000/tours")
+          const res = await axios.get(`${API_URL}/tours`)
           console.log(res)
 
           if(res.status === 200){
@@ -56,7 +59,7 @@ const App = () => {
         }
 
         try {
-          const res = await axios.get("http://localhost:4000/myProfile",{
+          const res = await axios.get(`${API_URL}/myProfile`,{
             headers: {Authorization: `Bearer ${token}`}
           })
 

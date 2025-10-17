@@ -10,6 +10,7 @@ const Booking = ({userInfos}) => {
 
   const destinationRef = useRef()
   const dateRef = useRef()
+  const API_URL = process.env.REACT_APP_API_URL;
 
   //we use a condition after the declaration of hooks
     if(!userInfos){
@@ -44,7 +45,7 @@ const Booking = ({userInfos}) => {
 
     //integration with the back-end to add new booking 
     try {
-      const res = await axios.post("http://localhost:4000/user/destination/" ,{
+      const res = await axios.post(`${API_URL}/user/destination/` ,{
         destination: destination,
         date,
       },{
