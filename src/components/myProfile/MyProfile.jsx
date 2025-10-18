@@ -8,7 +8,7 @@ const MyProfile = ({userInfos}) => {
     let token = localStorage.getItem("token")
 
     const [myBookings, setMybookings] = useState({tours: [], destinations: []})
-     const API_URL = process.env.REACT_APP_API_URL;
+     const API_URL = process.env.REACT_APP_API_URL || "https://to-do-travel-backend-2.onrender.com";
 
     const fetchBookings = async()=>{
         try {
