@@ -23,31 +23,42 @@ const App = () => {
 
       const [userinfos, setUserinfos] = useState(null)
 
-        // Add this line at the top of your component
-        const API_URL = process.env.REACT_APP_API_URL;
+      // Add this line at the top of your component
+      const API_URL = process.env.REACT_APP_API_URL || "https://to-do-travel-backend-2.onrender.com";
+      console.log("API_URL:", API_URL);
 
       const fetchDestinations = async ()=>{
         try {
+
+          console.log("Fetching destinations from:", `${API_URL}/destinations`);
           const res = await axios.get(`${API_URL}/destinations`)
+          console.log("Destinations response:", res)
 
           if(res.status === 200){
+            console.log("Destinations data:",res.data.data)
             setDestinations(res.data.data)
           }
+
         } catch (error) {
-          console.log(error)
+          console.log("Destinations fetch error:", error)
+          console.log("Error response:", error.response)
         }
       }
 
       const fetchTours = async ()=>{
         try {
+
+          console.log("Fetching tours from:", `${API_URL}/tours`);
           const res = await axios.get(`${API_URL}/tours`)
-          console.log(res)
+          console.log("Tours response:", res)
 
           if(res.status === 200){
+            console.log("Tours data:", res.data.data)
             setTours(res.data.data)
           }
         } catch (error) {
-          console.log(error)
+          console.log("Tours fetch error:", error)
+          console.log("Error response:", error.response)
         }
       }
 
