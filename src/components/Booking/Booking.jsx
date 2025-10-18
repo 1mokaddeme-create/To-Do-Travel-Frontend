@@ -10,7 +10,7 @@ const Booking = ({userInfos}) => {
 
   const destinationRef = useRef()
   const dateRef = useRef()
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = process.env.REACT_APP_API_URL || "https://to-do-travel-backend-2.onrender.com";
 
   //we use a condition after the declaration of hooks
     if(!userInfos){
