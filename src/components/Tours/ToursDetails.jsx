@@ -12,7 +12,7 @@ import axios from 'axios';
 
 
 const ToursDetails = ({tours, userInfos}) => {
-    console.log("starting")
+    
     const navigate = useNavigate()
     const [isConfirmed, setIsConfirmed] = useState(false)
     const membersRef = useRef()
@@ -21,7 +21,7 @@ const ToursDetails = ({tours, userInfos}) => {
     const { tourname } = useParams();
     const decodedName = tourname ? decodeURIComponent(tourname) : '';
     const tour = tours.find((t) => t.name === decodedName) 
-    const API_URL = process.env.REACT_APP_API_URL;
+    const API_URL = process.env.REACT_APP_API_URL || "https://to-do-travel-backend-2.onrender.com";
 
     if(!userInfos){
       return <Navigate to="/login" replace />
